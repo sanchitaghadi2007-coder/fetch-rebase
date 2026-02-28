@@ -1,0 +1,50 @@
+h2{
+    color: red;
+    margin: 50px;
+    background-color: blue;
+}
+
+h3{
+    color: blue;
+    margin: 20px;
+}
+
+hr{
+    color: blue;
+}
+
+p{
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    margin: 20px;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: blue;
+    margin: 20px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px;
+}
+
+span{
+    color: blue;
+    background-color: red;
+    margin: 25px;
+    padding: 5px;
+}
+
+img{
+    width:400px;
+    height: 300px;
+    margin: 5px;
+}
+
+a{
+    color: red;
+    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    margin:

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<body>
+    <h1>JQUERY - JAVA SCRIPT LIBRARY</h1> 
+<p id="para">Hello everyone today is wednesday</p>
+<button id="addpara">addpara</button>
+<ul id="list" style="list-style:none;">
+    <li>Hello</li>
+</ul>
+<button id="addlist">addlist</button>
+<div style="background-color: rgb(73, 86, 169);" id="test"></div>
+<button id="animate">animate</button>
+</body>
+<script>
+    $(function(){
+$("#animate").click(function(){
+$("#test").animate({
+    width:'400px',
+    height:'300px',
+    opacity:0.8,
+    left:50px
+
+},2000)
+})
+    })
+    $(function(){
+        $("#addpara").click(function(){
+        $("#para").append ("<br>Have a nice day")
+        })
+        $("#addlist").click(function(){
+            $("#list").append("<li>Have a nice day</li>")
+        })
+
+    })
+    $("#changebg").click(function(){
+        $("body").css("background-color", "lightyellow");
+    });  // ← Add this
+
+    // Running Date & Time
+    function updateDateTime(){
+        let now = new Date();
+        $("#datetime").text(now.toLocaleString());
+    }   // ← Add this
+
+    setInterval(updateDateTime, 1000);  
+    updateDateTime();                   
+
+</script>
+</html>

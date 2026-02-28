@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    input{
+        width: 70%;
+        height: 35px;
+        border-radius: 5px;color: blueviolet;margin: 10px;padding: 5px;
+    }
+    button{
+        width:70%;
+        height: 35%;
+        border-radius: 5px;color: blueviolet;margin: 10px;padding: 5px;
+        background-color: aquamarine;
+    }
+    h1{
+        color: red;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div style="display: flex;flex-direction: column;width: 40%;
+    height: auto;border-style: solid;border-color:rgb(91, 178, 218);border-width: 5px;padding: 10px;margin: 10px;">
+    <h1>My Calculator</h1>
+    <input id="a" type="text" placeholder="Enter a">
+    <input id="b" type="text" placeholder="Enter b">
+    <input id="result" type="text" placeholder="Result">
+    <div style="display: flex;flex-direction: row;gap: 5px;">
+    <button onclick="computeResult('+')">+</button> 
+        <button onclick="computeResult('-')">-</button> 
+            <button onclick="computeResult('*')">*</button> 
+                <button onclick="computeResult('/')">/</button> 
+                <button onclick="computeResult('%')">%</button>
+                 <button onclick="computeResult('^')">^</button>
+                 <button onclick="computeResult('p')">pow</button>
+                 
+ <button onclick="computeResult('q')">quotient</button>
+ <button onclick="computeResult('s')">sqroot</button>
+</div>
+    </div>
+<h2 id="warning" style="color: orange;">warning!!!</h2>
+</body>
+<script>
+    function computeResult(operator){
+        let a=parseInt(document.getElementById("a").value)
+        let b=parseInt(document.getElementById("b").value)
+        if(document.getElementById("a").value==="" || document.getElementById("b").value==="")
+        document.getElementById("warning").innerHTML="Both Arguments required.."
+        let c=0
+        switch(operator){
+            case '+':c=a+b;break;
+             case '-':c=a-b;break;
+              case '*':c=a*b;break;
+               case '/':c=(a/b).toFixed(2);break;
+               case '%':c=a%b;break;
+               case '^':c=a*a;break;
+               case 'p':c=Math.pow(a,b);break;
+               case 'q':c=a/b;c=Math.floor(c);break;
+               case 's':c=Math.sqrt(a);break;
+        }
+        
+        
+        document.getElementById("result").value=c
+    }
+</script>
+</html>

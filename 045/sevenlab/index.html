@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JSON -- JavScript Object Notation</h1>
+    <button onclick="showMe()">Show JSON</button>
+    <h3 id="myjson" style="color: blue;"></h3>
+</body>
+<script>
+    let fruit={
+        fruitName:"Orange",
+        price:300.00,
+        imageUrl:"./orange.jpg"
+    }
+    document.getElementById("myjson").innerHTML=fruit.fruitName+
+    " "+fruit.price+" "+"<img src='"+fruit.imageUrl+
+    " 'width='100px' height='100px' ">
+console.log(fruit)
+</script>
+</html>
